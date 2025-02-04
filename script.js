@@ -141,3 +141,50 @@ class App {
 }
 
 App.init();
+
+
+
+// 1️⃣ DOMHelper Class
+// clearEventListeners(element): Creates a deep clone of the element (removes old event listeners) and replaces it.
+// moveElement(elementId, newDestinationSelector): Moves an element from one place to another in the DOM.
+
+
+// 2️⃣ Component Class
+// This is a Base Class that:
+// Accepts an element where the component should be attached.
+// detach(): Removes the element from the DOM.
+// attach(): Inserts the element at the correct position.
+
+
+// 3️⃣ Tooltip Class (Extends Component)
+// Shows a tooltip when clicking "More Info".
+// Calls closeNotifierFunction when clicked to close itself.
+
+
+// 4️⃣ ProjectItem Class
+// Handles individual projects inside a list.
+// Stores id, sets up event listeners, and controls buttons.
+// Methods:
+// showMoreInfoHandler(): Creates and attaches a Tooltip when clicking "More Info".
+// connectMoreInfoButton(): Adds a click listener to the "More Info" button.
+// connectSwitchButton(type): Adds event listeners to the "Finish/Activate" button.
+// update(updateProjectListsFn, type): Updates the project when moved between lists.
+
+
+// 5️⃣ ProjectList Class
+// Manages lists of projects in Active or Finished categories.
+// Methods:
+// setSwitchHandlerFunction(fn): Sets a function for handling project switching.
+// addProject(project): Moves a project to the correct list.
+// switchProject(projectId): Calls the switch handler and removes the project from the old list.
+
+
+// 6️⃣ App Class (Entry Point)
+// Initializes two ProjectList instances (active and finished).
+// Sets up event listeners to move projects between lists using .bind().
+
+// Your project follows OOP principles effectively. The key takeaways: 
+// ✅ Encapsulation: Classes handle their own logic.
+// ✅ Reusability: Component is extendable (used by Tooltip).
+// ✅ Event Handling: .bind() ensures correct this context.
+// ✅ Separation of Concerns: Different classes for UI, logic, and helpers.
