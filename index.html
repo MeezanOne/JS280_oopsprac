@@ -9,6 +9,9 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <template id="tooltip">
+        <p></p>
+    </template>
     <header id="main-header">
       <h1>Project Planner</h1>
     </header>
@@ -21,7 +24,8 @@
           id="p1"
           data-extra-info="Got lifetime access, but would be nice to finish it soon!"
           class="card"
-        >
+          draggable="true"
+          >
           <h2>Finish the Course</h2>
           <p>Finish the course within the next two weeks.</p>
           <button class="alt">More Info</button>
@@ -31,6 +35,7 @@
           id="p2"
           data-extra-info="Not really a business topic but still important."
           class="card"
+          draggable="true"
         >
           <h2>Buy Groceries</h2>
           <p>Don't forget to pick up groceries today.</p>
@@ -48,6 +53,7 @@
           id="p3"
           data-extra-info="Super important conference! Fictional but still!"
           class="card"
+          draggable="true"
         >
           <h2>Book Hotel</h2>
           <p>
